@@ -38,6 +38,25 @@
 
 - confusion matrix
 
+  A **confusion matrix**, in predictive analytics, is a two-by-two table that tells us the rate of false positives, false negatives, true positives and true negatives for a test or predictor. We can make a confusion matrix if we know both the predicted values and the true values for a sample set.
+
+  In machine learning and statistical classification, a confusion matrix is a table in which predictions are represented in     columns and actual status is represented by rows. Sometimes this is reversed, with actual instances in rows and predictions in  columns. The table is an extension of the confusion matrix in predictive analytics, and makes it easy to see whether mislabelling has occurred and whether the predictions are more or less correct.
+
+  <p align="center"><img src="https://live.staticflickr.com/65535/49127153233_d8af9a98ce_o_d.png" width="600"></p>
+  
+
+   
+   Here **a** is the number of true negatives, and **d** the number of true positives. **b** is the number of false positives, and   **c** is the number of false negatives. 
+
+
+
+    - The **accuracy** of the prediction or test is defined as (a + d)/(a + c + d + e).
+    - The **true positive rate** is given by d/(c + d), and is also called the recall. It tells us what proportion of positive cases were correctly identified. 
+    - The **false positive rate**, or proportion of negative cases (incorrectly) identified as positive, is given by b/(a + b).
+    - The **true negative rate** is a/(a + b), and represents the proportion of negative cases that were correctly identified. 
+    - The **false negative rate** is c/(c + d), and tells us what proportion of positive cases were incorrectly labeled as negative.
+    - The proportion of the instances we correctly labeled as positive  (per total positive prediction) is given by d/(b + d) and is called the **precision**. 
+
 - Mean Average Precission - (mAP)
 
 - precission-recall
