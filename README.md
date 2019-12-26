@@ -63,7 +63,7 @@ For each class:
 
 First, your neural net **detection-results** are sorted by decreasing confidence and are assigned to **ground-truth objects**. We have "a match" when they share the **same label and an IoU >= 0.5** (Intersection over Union greater than 50%). This "match" is considered a true positive if that ground-truth object has not been already used (to avoid multiple detections of the same object). 
   
-  <img src="https://user-images.githubusercontent.com/15831541/37725175-45b9e1a6-2d2a-11e8-8c15-2fb4d716ca9a.png" width="35%" height="35%" />
+  <img src="https://user-images.githubusercontent.com/15831541/37725175-45b9e1a6-2d2a-11e8-8c15-2fb4d716ca9a.png" width="25%" height="25%" />
 
 ​	Using this criterium, we calculate the precision/recall curve. E.g:
 
@@ -78,9 +78,9 @@ No approximation is involved since the curve is piecewise constant.
 
 ​	We calculate the mean of all the AP's, resulting in an mAP value from 0 to 100%. E.g:
 
-<img src="https://user-images.githubusercontent.com/15831541/38933241-5f9556ae-4310-11e8-9d47-cb205f9b103b.png"/>
+<img src="https://user-images.githubusercontent.com/15831541/38933241-5f9556ae-4310-11e8-9d47-cb205f9b103b.png" width="35%" height="35%" />
 
-<img src="https://user-images.githubusercontent.com/15831541/38933180-366b6fca-4310-11e8-99b9-17ad4b159b86.png" />
+<img src="https://user-images.githubusercontent.com/15831541/38933180-366b6fca-4310-11e8-99b9-17ad4b159b86.png" width="35%" height="35%"  />
 
 - precission-recall
 - loss function
