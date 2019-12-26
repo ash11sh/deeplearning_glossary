@@ -1,7 +1,6 @@
 
 # 🄳🄴🄴🄿 🄻🄴🄰🅁🄽🄸🄽🄶  🄶🄻🄾🅂🅂🄰🅁🅈 (>‿◠)✌
 
-
 ---
 
 - batch-size
@@ -45,8 +44,7 @@
   <p align="center"><img src="https://live.staticflickr.com/65535/49127153233_d8af9a98ce_o_d.png" width="600"></p>
   
 
-   
-   Here **a** is the number of true negatives, and **d** the number of true positives. **b** is the number of false positives, and   **c** is the number of false negatives. 
+ Here **a** is the number of true negatives, and **d** the number of true positives. **b** is the number of false positives, and   **c** is the number of false negatives. 
 
 
 
@@ -59,36 +57,48 @@
 
 - Mean Average Precission - (mAP)
 
+  ###### Calculate AP
+
+  For each class:
+
+  First, your neural net **detection-results** are sorted by decreasing confidence and are assigned to **ground-truth objects**. We have "a match" when they share the **same label and an IoU >= 0.5** (Intersection over Union greater than 50%). This "match" is considered a true positive if that ground-truth object has not been already used (to avoid multiple detections of the same object). 
+
+<img src="https://user-images.githubusercontent.com/15831541/37725175-45b9e1a6-2d2a-11e8-8c15-2fb4d716ca9a.png" width="35%" height="35%" />
+
+​		Using this criterium, we calculate the precision/recall curve. E.g:
+
+<img src="https://user-images.githubusercontent.com/15831541/43008995-64dd53ce-8c34-11e8-8a2c-4567b1311910.png" width="45%" height="45%" />
+
+```markdown
+Then we compute a version of the measured precision/recall curve with 	**precision monotonically decreasing** (shown in light red), by setting 	the precision for recall `r` to the maximum precision obtained for any recall `r' > r`.
+```
+
+​	Finally, we compute the AP as the **area under this curve** (shown in light blue) by numerical integration.
+​	No approximation is involved since the curve is piecewise constant.
+
+###### 		Calculate mAP
+
+​	We calculate the mean of all the AP's, resulting in an mAP value from 0 to 100%. E.g:
+
+<img src="https://user-images.githubusercontent.com/15831541/38933241-5f9556ae-4310-11e8-9d47-cb205f9b103b.png"/>
+
+<img src="https://user-images.githubusercontent.com/15831541/38933180-366b6fca-4310-11e8-99b9-17ad4b159b86.png" />
+
 - precission-recall
-
 - loss function
-
 - mAP curve
-
 - parameters
-
 - tensors
-
 - checkpoint
-
 - backbone of network
-
 - res-net
-
 - mobile-net
-
 - roi-extractor
-
 - feature maps
-
 - FCN network
-
 - FPN
-
 - loss function
-
 - Intersection over Union (IoU)
-
 - ROI pooling, align, warping
 
 
