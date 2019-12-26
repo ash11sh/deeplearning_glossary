@@ -78,7 +78,7 @@ No approximation is involved since the curve is piecewise constant.
 
 ​	We calculate the mean of all the AP's, resulting in an mAP value from 0 to 100%. 
 
-> you can this [code](https://github.com/Cartucho/mAP) to evaluate your object detection model
+> you can use this [code](https://github.com/Cartucho/mAP) to evaluate your object detection model
 
 E.g:
 
