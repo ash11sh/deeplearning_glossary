@@ -86,6 +86,7 @@ E.g:
 
 <img src="https://user-images.githubusercontent.com/15831541/38933180-366b6fca-4310-11e8-99b9-17ad4b159b86.png" width="35%" height="35%"  />
 
+---
 
 - precission-recall
 - loss function
