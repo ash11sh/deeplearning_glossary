@@ -57,24 +57,24 @@
 
 - Mean Average Precission - (mAP)
 
-  ###### Calculate AP
+#### Calculate AP
 
-  For each class:
+For each class:
 
-  First, your neural net **detection-results** are sorted by decreasing confidence and are assigned to **ground-truth objects**. We have "a match" when they share the **same label and an IoU >= 0.5** (Intersection over Union greater than 50%). This "match" is considered a true positive if that ground-truth object has not been already used (to avoid multiple detections of the same object). 
+First, your neural net **detection-results** are sorted by decreasing confidence and are assigned to **ground-truth objects**. We have "a match" when they share the **same label and an IoU >= 0.5** (Intersection over Union greater than 50%). This "match" is considered a true positive if that ground-truth object has not been already used (to avoid multiple detections of the same object). 
   
   <img src="https://user-images.githubusercontent.com/15831541/37725175-45b9e1a6-2d2a-11e8-8c15-2fb4d716ca9a.png" width="35%" height="35%" />
 
-​			Using this criterium, we calculate the precision/recall curve. E.g:
+​	Using this criterium, we calculate the precision/recall curve. E.g:
 
-​																<img src="https://user-images.githubusercontent.com/15831541/43008995-64dd53ce-8c34-11e8-8a2c-4567b1311910.png" width="45%" height="45%" />
+​	<img src="https://user-images.githubusercontent.com/15831541/43008995-64dd53ce-8c34-11e8-8a2c-4567b1311910.png" width="45%" height="45%" />
 
 Then we compute a version of the measured precision/recall curve with 	**precision monotonically decreasing** (shown in light red), by setting 	the precision for recall `r` to the maximum precision obtained for any recall `r' > r`.
 
 Finally, we compute the AP as the **area under this curve** (shown in light blue) by numerical   integration.
 No approximation is involved since the curve is piecewise constant.
 
-###### 		Calculate mAP
+#### Calculate mAP
 
 ​	We calculate the mean of all the AP's, resulting in an mAP value from 0 to 100%. E.g:
 
